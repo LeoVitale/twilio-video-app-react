@@ -18,5 +18,5 @@ export default createMuiTheme({
       main: '#F22F46',
     },
   },
-  sidebarWidth: 260,
+  sidebarWidth: 150,
 });

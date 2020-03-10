@@ -43,10 +43,13 @@ export default function AppStateProvider(props: React.PropsWithChildren<{}>) {
       ...usePasscodeAuth(), // eslint-disable-line react-hooks/rules-of-hooks
     };
   } else {
+    console.log('REACT_APP_TOKEN_ENDPOINT');
+    console.log(process.env.REACT_APP_TOKEN_ENDPOINT);
     contextValue = {
       ...contextValue,
       getToken: async (identity, roomName) => {
         const headers = new window.Headers();
+
         const endpoint = 'https://idx-twilio-server.herokuapp.com/token';
         const params = new window.URLSearchParams({ identity, roomName });
 

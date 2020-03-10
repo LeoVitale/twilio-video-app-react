@@ -9,10 +9,12 @@ const Container = styled('aside')(({ theme }) => ({
   position: 'absolute',
   top: 0,
   bottom: 0,
-  right: `calc(100% - ${theme.sidebarWidth}px)`,
+  // right: `calc(100% - ${theme.sidebarWidth}px)`,
+  width: `${theme.sidebarWidth}px`,
   left: 0,
   padding: '0.5em',
   overflowY: 'auto',
+  zIndex: 100,
 }));
 
 export default function ParticipantStrip() {
